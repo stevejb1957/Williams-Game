@@ -1,3 +1,8 @@
+var answers = 
+[
+    { answer: "Horse", imagePath: "../Images/horse.jpg" }
+];
+
 var input;
 var my_pic = new Image();
 my_pic.src = "../Images/horse.jpg";
