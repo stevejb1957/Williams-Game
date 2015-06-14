@@ -109,6 +109,10 @@ function checkAnswer(event,ui)
         $(this).val('');
         return false;
     }
+    else
+    {
+        document.getElementById('wrong').play();   
+    }
 }    
   
 $(function() 
@@ -120,7 +124,7 @@ $(function()
         "Hello",
         "Cat",
         "Cow",
-        "Cat",
+        "Car",
         "Dog",
         "Doll",
         "Dam"
