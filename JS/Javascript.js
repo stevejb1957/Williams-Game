@@ -35,6 +35,7 @@ function title()
         height: 30
         
     });
+    input.focus();
 }
 
 
