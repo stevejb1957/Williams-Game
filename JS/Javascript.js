@@ -1,3 +1,4 @@
+
 var answers = 
 [
     { answer: "Horse", imagePath: "../Images/horse.jpg" }
@@ -6,11 +7,19 @@ var answers =
 var input;
 var my_pic = new Image();
 my_pic.src = "../Images/horse.jpg";
-var h = 413; 
 var ctx;
 var canvas;
-
+var expectedAnswer;
+var currentAnswerIndex = 0;
 window.onload=title
+
+
+function updateAnswer(answerObject)
+{
+    expectedAnswer = answerObject.answer;
+    my_pic.src = answerObject.imagePath;
+    animal();
+}
 
 function title()
 {
@@ -41,9 +50,8 @@ function title()
         height: 30
         
     });
-    input.focus();
+    input.focus();    
 }
-
 
 function play()
 {    
@@ -72,20 +80,23 @@ function begin()
     }, 500);
 
     window.setTimeout(function(){
-     animal();
+     updateAnswer(answers[0]);
     },1000);        
 }
     
 function animal()
 {     
     var ctx = document.getElementById('my_canvas').getContext('2d');
-    ctx.drawImage(my_pic,0,0,620,413,325,450,620,h);
+    ctx.drawImage(my_pic,0,0,620,413,325,450,620,413);
 } 
 
 function checkAnswer(event,ui)
 {
     var answer = ui.item.value;
-    alert(answer);
+    if(answer == expectedAnswer)
+    {
+      alert("Well Done")   
+    }
 }
     
   
