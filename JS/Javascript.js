@@ -28,7 +28,7 @@ function updateAnswer()
     currentAnswerIndex = (currentAnswerIndex + 1) % answers.length;
     var answerObject = answers[currentAnswerIndex];
     expectedAnswer = answerObject.answer;
-    ctx.clearRect(325,450,620,413);
+    ctx.clearRect(325,450,625,418);
     my_pic = answerObject.image;
     animal();
 }
@@ -37,8 +37,6 @@ function title()
 {
     canvas = document.getElementById('my_canvas'); 
     ctx = canvas.getContext('2d'); 
-    // fillText(text,x,y,maxWidth)
-    // strokeText(text,x,y,maxWidth)
     ctx.fillStyle = "rgba(245, 60, 16, 0.72)";
     ctx.shadowColor = "#000";
     ctx.shadowOffsetX = 4;
