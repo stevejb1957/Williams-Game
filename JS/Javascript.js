@@ -16,7 +16,7 @@ function title(){
         ctx.fillText("Guess the Animal Game", 130,100);
         ctx.strokeText("Guess the Animal Game",130,100);
         
-    
+    name = prompt("What is your name");    
         
     }
 
@@ -35,7 +35,7 @@ function title(){
 
 window.onload=title
 
-name = prompt("What is your name");
+
 
 
 //function prompt(){
