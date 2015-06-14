@@ -7,7 +7,15 @@ var answers =
 
 var input;
 var my_pic = new Image();
-my_pic.src = "../Images/horse.jpg";
+my_pic.src = "../Images/cat.jpg";
+
+for (var i = 0; i < answers.length; i++)
+{
+    var image = new Image();
+    image.src = answers[i].imagePath;
+    answers[i].image = image;
+}
+
 var ctx;
 var canvas;
 var expectedAnswer;
@@ -15,10 +23,13 @@ var currentAnswerIndex = 0;
 window.onload=title
 
 
-function updateAnswer(answerObject)
+function updateAnswer()
 {
+    currentAnswerIndex = (currentAnswerIndex + 1) % answers.length;
+    var answerObject = answers[currentAnswerIndex];
     expectedAnswer = answerObject.answer;
-    my_pic.src = answerObject.imagePath;
+    ctx.clearRect(325,450,620,413);
+    my_pic = answerObject.image;
     animal();
 }
 
@@ -48,8 +59,7 @@ function title()
         y: 150,
         width: inputWidth,
         fontSize: 30,
-        height: 30
-        
+        height: 30        
     });
     input.focus();    
 }
@@ -81,7 +91,7 @@ function begin()
     }, 500);
 
     window.setTimeout(function(){
-     updateAnswer(answers[0]);
+     updateAnswer();
     },1000);        
 }
     
@@ -96,10 +106,10 @@ function checkAnswer(event,ui)
     var answer = ui.item.value;
     if(answer == expectedAnswer)
     {
-      alert("Well Done")   
+        alert("Well done!");
+        updateAnswer();
     }
-}
-    
+}    
   
 $(function() 
 {
