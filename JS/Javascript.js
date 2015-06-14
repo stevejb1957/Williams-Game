@@ -102,11 +102,11 @@ function begin()
     //otherCanvas.getContext('2d').clearRect(0,0, otherCanvas.width, otherCanvas.height);
     window.setTimeout(function(){
      play();
-    }, 1500);
+    }, 500);
 
     window.setTimeout(function(){
      animal();
-    },2500);
+    },1000);
         
 }
     
