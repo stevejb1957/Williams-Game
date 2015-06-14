@@ -6,8 +6,8 @@ var my_pic = new Image();
 
 function title()
 {
-    
-    var ctx = document.getElementById('my_canvas').getContext('2d'); 
+    var canvas = document.getElementById('my_canvas'); 
+    var ctx = canvas.getContext('2d'); 
         // fillText(text,x,y,maxWidth)
         // strokeText(text,x,y,maxWidth)
         ctx.fillStyle = "rgba(245, 60, 16, 0.72)";
@@ -19,13 +19,19 @@ function title()
         ctx.fillText("Guess the Animal Game", 130,100);
         ctx.strokeText("Guess the Animal Game",130,100);
         
-      
+      var inputWidth = 300;
      
     input = new CanvasInput 
     ({ 
-        canvas: document.getElementById('my_canvas'),
+        canvas: canvas,
         placeHolder: "What is your name?",
-        onsubmit: begin
+        onsubmit: begin,
+        x: canvas.width/2-inputWidth/2,
+        y: 150,
+        width: inputWidth,
+        fontSize: 30,
+        height: 30
+        
     });
 }
 
