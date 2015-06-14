@@ -104,7 +104,7 @@ function checkAnswer(event,ui)
     var answer = ui.item.value;
     if(answer == expectedAnswer)
     {
-        alert("Well done!");
+        document.getElementById('cheer').play();
         updateAnswer();
         $(this).val('');
         return false;
