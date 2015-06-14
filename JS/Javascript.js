@@ -106,6 +106,8 @@ function checkAnswer(event,ui)
     {
         alert("Well done!");
         updateAnswer();
+        $(this).val('');
+        return false;
     }
 }    
   
