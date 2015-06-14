@@ -1,7 +1,8 @@
 
 var answers = 
 [
-    { answer: "Horse", imagePath: "../Images/horse.jpg" }
+    { answer: "Horse", imagePath: "../Images/horse.jpg" },
+    { answer: "Cat", imagePath: "../Images/cat.jpg" }
 ];
 
 var input;
