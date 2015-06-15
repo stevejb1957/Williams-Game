@@ -2,7 +2,8 @@
 var answers = 
 [
     { answer: "Horse", imagePath: "../Images/horse.jpg" },
-    { answer: "Cat", imagePath: "../Images/cat.jpg" }
+    { answer: "Cat", imagePath: "../Images/cat.jpg" },
+    { answer: "Dog", imagePath: "../Images/dog.jpg" }
 ];
 
 var input;
@@ -111,7 +112,8 @@ function checkAnswer(event,ui)
     }
     else
     {
-        document.getElementById('wrong').play();   
+        document.getElementById('wrong').play();
+        checkAnswer()
     }
 }    
   
