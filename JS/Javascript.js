@@ -1,4 +1,5 @@
-
+var x =0
+var score = ["","ZERO","ONE","TWO","THREE"];
 var answers = 
 [
     { answer: "Horse", imagePath: "../Images/horse.jpg" },
@@ -26,22 +27,26 @@ window.onload=title
 
 
 function points()
+
 {
-input = new CanvasInput 
+x = x + 1
+
+
+{
+name = new CanvasInput
     ({ 
-        
-      
         canvas: canvas,
-        placeHolder: " Your Points",
+        placeHolder: score[x] ,
         onsubmit: begin,
-        x: 1000,
-        y: 250,
+        x: 1010,
+        y: 350,
         width: 180,
         fontSize: 30,
         height: 30        
     });
+    updateAnswer();
 }
-
+}
 
 function updateAnswer()
 {   
@@ -127,7 +132,7 @@ function checkAnswer(event,ui)
     if(answer == expectedAnswer)
     {
         document.getElementById('cheer').play();
-        updateAnswer();
+        points();
         $(this).val('');
         return false;
     }
