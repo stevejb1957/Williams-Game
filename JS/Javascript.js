@@ -24,8 +24,28 @@ var currentAnswerIndex = 0;
 window.onload=title
 
 
-function updateAnswer()
+
+function points()
 {
+input = new CanvasInput 
+    ({ 
+        
+      
+        canvas: canvas,
+        placeHolder: " Your Points",
+        onsubmit: begin,
+        x: 1000,
+        y: 250,
+        width: 180,
+        fontSize: 30,
+        height: 30        
+    });
+}
+
+
+function updateAnswer()
+{   
+    //animal.slideDown()
     currentAnswerIndex = (currentAnswerIndex + 1) % answers.length;
     var answerObject = answers[currentAnswerIndex];
     expectedAnswer = answerObject.answer;
@@ -77,6 +97,7 @@ function play()
     ctx.strokeText("Hello " + input.value() + " let's play a game",250,300);
     ctx.fillStyle = "rgba(77, 217, 59, 0.72)";
     ctx.fillText("What am I?",450,400)
+    points();
 }
 
 function begin()
