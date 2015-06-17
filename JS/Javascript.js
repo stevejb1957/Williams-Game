@@ -3,7 +3,7 @@ var score = ["","ZERO","ONE","TWO","THREE"];
 var answers = 
 [
     { answer: "Horse", imagePath: "../Images/horse.jpg" },
-    { answer: "animal", imagePath: "../Images/animals.jpg" },
+    { answer: "Welldone", imagePath: "../Images/Welldone.jpg" },
     { answer: "Cat", imagePath: "../Images/cat.jpg" },
     { answer: "Dog", imagePath: "../Images/dog.jpg" }
 ];
@@ -71,7 +71,7 @@ function updateAnswer()
     currentAnswerIndex = (currentAnswerIndex + 1) % answers.length;
     var answerObject = answers[currentAnswerIndex];
     expectedAnswer = answerObject.answer;
-    ctx.clearRect(325,450,625,418);
+    ctx.clearRect(325,450,645,418);
     my_pic = answerObject.image;
     animal();
 }
@@ -111,7 +111,7 @@ function title()
 function play()
 {    
     var ctx = document.getElementById('my_canvas').getContext('2d');
-    ctx.clearRect(335,250,650,600);
+    ctx.clearRect(335,250,660,600);
     ctx.fillStyle = "rgba(16, 60, 245, 0.72)";
     ctx.shadowColor = "#000";
     ctx.shadowOffsetX = 2;
@@ -136,7 +136,7 @@ function begin()
     ctx.clearRect(475, 148, 350, 52);
     window.setTimeout(function(){
      play();
-    }, 500);
+    }, 200);
 
     window.setTimeout(function(){
      updateAnswer();
