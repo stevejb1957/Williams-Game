@@ -3,13 +3,17 @@ var score = ["","ZERO","ONE","TWO","THREE"];
 var answers = 
 [
     { answer: "Horse", imagePath: "../Images/horse.jpg" },
+    { answer: "animal", imagePath: "../Images/animals.jpg" },
     { answer: "Cat", imagePath: "../Images/cat.jpg" },
     { answer: "Dog", imagePath: "../Images/dog.jpg" }
 ];
 
 var input;
 var my_pic = new Image();
-my_pic.src = "../Images/cat.jpg";
+my_pic.src = "../Images/animals.jpg";
+
+var my_pic1 = new Image();
+my_pic1.src = "../Images/animals.jpg";
 
 for (var i = 0; i < answers.length; i++)
 {
@@ -24,16 +28,13 @@ var expectedAnswer;
 var currentAnswerIndex = 0;
 window.onload=title
 
-function finishGame()
-{
-  alert("well done");
-}
+
 
 function points()
 
 {
  
-  if ( x < 3 )
+  if ( x < 4)
 {
   x = x + 1
 } else
@@ -41,8 +42,8 @@ function points()
         
  window.setTimeout(function(){
      updateAnswer();
-    },1000);
- finishGame()
+    },2000);
+ finishGame();
 }
 
 
@@ -87,6 +88,9 @@ function title()
     ctx.font = "bold 100px Ariel";
     ctx.fillText("Guess the Animal Game", 130,100);
     ctx.strokeText("Guess the Animal Game",130,100);
+    ctx.drawImage(my_pic1,0,0,650,600,335,250,650,600);
+    
+    
 
     var inputWidth = 300;
      
@@ -107,6 +111,7 @@ function title()
 function play()
 {    
     var ctx = document.getElementById('my_canvas').getContext('2d');
+    ctx.clearRect(335,250,650,600);
     ctx.fillStyle = "rgba(16, 60, 245, 0.72)";
     ctx.shadowColor = "#000";
     ctx.shadowOffsetX = 2;
@@ -181,3 +186,8 @@ $(function()
         select: checkAnswer
     });
 });
+
+function finishGame()
+{
+      alert("End");
+}
