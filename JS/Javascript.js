@@ -33,11 +33,15 @@ function points()
 
 {
  
-  if ( x < 4 )
+  if ( x < 3 )
 {
   x = x + 1
 } else
 {
+        
+ window.setTimeout(function(){
+     updateAnswer();
+    },1000);
  finishGame()
 }
 
@@ -113,7 +117,9 @@ function play()
     ctx.fillText("Hello " + input.value() + " let's play a game", 250,225);
     ctx.strokeText("Hello " + input.value() + " let's play a game",250,225);
     ctx.fillStyle = "rgba(77, 217, 59, 0.72)";
-    ctx.fillText("What am I?",450,300)
+    ctx.fillText("What am I?",450,300);
+     ctx.fillStyle = "rgba(211, 40, 217, 0.72)";
+    ctx.fillText("Your Points",960,325);
     points();
 }
 
