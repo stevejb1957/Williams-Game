@@ -24,12 +24,22 @@ var expectedAnswer;
 var currentAnswerIndex = 0;
 window.onload=title
 
-
+function finishGame()
+{
+  alert("well done");
+}
 
 function points()
 
 {
-x = x + 1
+ 
+  if ( x < 4 )
+{
+  x = x + 1
+} else
+{
+ finishGame()
+}
 
 
 {
