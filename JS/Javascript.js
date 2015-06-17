@@ -125,7 +125,7 @@ function begin()
 function animal()
 {     
     var ctx = document.getElementById('my_canvas').getContext('2d');
-    ctx.drawImage(my_pic,0,0,620,413,325,350,620,413);
+    ctx.drawImage(my_pic,0,0,620,413,350,350,620,413);
 } 
 
 function checkAnswer(event,ui)
