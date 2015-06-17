@@ -42,6 +42,8 @@ name = new CanvasInput
         y: 350,
         width: 180,
         fontSize: 30,
+        fontColor:'#f80c0c',
+        fontWeight:'bold',
         height: 30        
     });
     updateAnswer();
@@ -98,10 +100,10 @@ function play()
     ctx.shadowBlur = 2;
     ctx.font = "bold 50px Comic Sans MS";
     ctx.fillText("", 130,100);
-    ctx.fillText("Hello " + input.value() + " let's play a game", 250,300);
-    ctx.strokeText("Hello " + input.value() + " let's play a game",250,300);
+    ctx.fillText("Hello " + input.value() + " let's play a game", 250,225);
+    ctx.strokeText("Hello " + input.value() + " let's play a game",250,225);
     ctx.fillStyle = "rgba(77, 217, 59, 0.72)";
-    ctx.fillText("What am I?",450,400)
+    ctx.fillText("What am I?",450,300)
     points();
 }
 
@@ -123,7 +125,7 @@ function begin()
 function animal()
 {     
     var ctx = document.getElementById('my_canvas').getContext('2d');
-    ctx.drawImage(my_pic,0,0,620,413,325,450,620,413);
+    ctx.drawImage(my_pic,0,0,620,413,325,350,620,413);
 } 
 
 function checkAnswer(event,ui)
