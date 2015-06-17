@@ -173,12 +173,12 @@ $(function()
         "Horse",
         "House",
         "Hello",
-        "Cat",
         "Cow",
+        "Cat",
         "Car",
-        "Dog",
+        "Dam",
         "Doll",
-        "Dam"
+        "Dog"
     ];
     $( "#tags" ).autocomplete
     ({
