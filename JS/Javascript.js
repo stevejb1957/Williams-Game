@@ -1,5 +1,5 @@
 var x =0
-var score = ["","ZERO","ONE","TWO","THREE"];
+var score = ["","ZERO","ONE","TWO","**THREE**"];
 var answers = 
 [
     { answer: "Horse", imagePath: "../Images/horse.jpg" },
@@ -136,7 +136,7 @@ function begin()
     ctx.clearRect(475, 148, 350, 52);
     window.setTimeout(function(){
      play();
-    }, 200);
+    }, 100);
 
     window.setTimeout(function(){
      updateAnswer();
