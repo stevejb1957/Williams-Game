@@ -67,7 +67,6 @@ name = new CanvasInput
 
 function updateAnswer()
 {   
-    //animal.slideDown()
     currentAnswerIndex = (currentAnswerIndex + 1) % answers.length;
     var answerObject = answers[currentAnswerIndex];
     expectedAnswer = answerObject.answer;
@@ -125,6 +124,7 @@ function play()
     ctx.fillText("What am I?",450,300);
      ctx.fillStyle = "rgba(211, 40, 217, 0.72)";
     ctx.fillText("Your Points",960,325);
+     
     points();
 }
 
